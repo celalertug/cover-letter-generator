@@ -78,7 +78,7 @@ function replaceAll(str, find, replace) {
   await write("/tmp/hehe.html", s)
 
   // const cmd = `wkhtmltopdf -L 35 /tmp/hehe.html output.pdf`
-  const cmd = `wkhtmltopdf /tmp/hehe.html celal-ertug-cover-letter-for-${companyName}.pdf`
+  const cmd = `wkhtmltopdf /tmp/hehe.html celal-ertug-cover-letter-for-${companyName.replace(/\s/g,'')}.pdf`
 
   try {
     await execAsync(cmd)
