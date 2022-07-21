@@ -42,9 +42,6 @@ function replaceAll(str, find, replace) {
 
 (async () => {
 
-  // const companyName = "Cloud Clearwater";
-  // const positionName = "Software Developer";
-  // const coverLetterHtml = "./coverletter.html"
 
   if (process.argv.length === 2) {
     return console.log(`
@@ -75,10 +72,10 @@ function replaceAll(str, find, replace) {
   s = replaceAll(s, "{COMPANY_NAME}", companyName)
   s = replaceAll(s, "{POSITION_NAME}", positionName)
 
-  await write("/tmp/hehe.html", s)
+  await write("out.html", s)
 
-  // const cmd = `wkhtmltopdf -L 35 /tmp/hehe.html output.pdf`
-  const cmd = `wkhtmltopdf /tmp/hehe.html celal-ertug-cover-letter-for-${companyName.replace(/\s/g,'')}.pdf`
+  const cmd = `wkhtmltopdf out.html cover-letter-for-${companyName.replace(/\s/g,'')}.pdf`
+
 
   try {
     await execAsync(cmd)
