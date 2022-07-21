@@ -1,6 +1,6 @@
 # Cover letter generator
 
-Create your cover letter on Google document. Download as html.  
+Create your cover letter on Google docs. Download as html.  
 
 Use template keyword for : 
 
